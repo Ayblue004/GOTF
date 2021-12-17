@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+@-ms-viewport{
+  width: device-width;
+}
 
 html.html{
   background-image: url(backimg.jpeg);
