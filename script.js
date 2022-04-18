@@ -66,31 +66,19 @@ const characters = document.getElementsByClassName("characters")[0];
 const weapons = document.getElementsByClassName("weapons")[0];
 const places = document.getElementsByClassName("places")[0];
 
-characters.addEventListener("mouseover", ()=>{
-	exploreDesc0.classList.add("exploreDesc2");
+function addEventMouse(a,b){
+a.addEventListener("mouseover", ()=>{
+	b.classList.add("exploreDesc2");
 })
 
-characters.addEventListener("mouseout", ()=>{
-	exploreDesc0.classList.remove("exploreDesc2");
+a.addEventListener("mouseout", ()=>{
+  b.classList.remove("exploreDesc2");
 })
+}
 
-
-weapons.addEventListener("mouseover", ()=>{
-	exploreDesc1.classList.add("exploreDesc2");
-})
-
-weapons.addEventListener("mouseout", ()=>{
-	exploreDesc1.classList.remove("exploreDesc2");
-})
-
-places.addEventListener("mouseover", ()=>{
-	exploreDesc2.classList.add("exploreDesc2");
-})
-
-places.addEventListener("mouseout", ()=>{
-	exploreDesc2.classList.remove("exploreDesc2");
-})
-
+addEventMouse(characters, exploreDesc0);
+addEventMouse(weapons, exploreDesc1);
+addEventMouse(places, exploreDesc2);
 
 
 
